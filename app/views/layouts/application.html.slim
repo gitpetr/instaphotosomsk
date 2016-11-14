@@ -1,0 +1,21 @@
+doctype html
+html
+  head
+    title Instaphoto 
+    = csrf_meta_tags 
+
+    = stylesheet_link_tag    'application', media: 'all' 
+    = javascript_include_tag 'application' 
+
+  body
+    
+    .container-fluid.container-background
+      .container
+        ul.nav.nav-pills
+          li.nav-item
+            = link_to "Instaphoto", root_path, class: "nav-landing"
+          li.nav-item
+            = link_to "О нас", pages_about_path, class: "nav-landing"
+        = yield 
+ 
+ 
