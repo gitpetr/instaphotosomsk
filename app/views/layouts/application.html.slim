@@ -12,10 +12,22 @@ html
     .container-fluid.container-background
       .container
         ul.nav.nav-pills
+
+
           li.nav-item
             = link_to "Instaphoto", root_path, class: "nav-landing"
+
+          - if user_signed_in?
+            li.nav-item
+              = link_to "Выйти", destroy_user_session_path, method: :delete, class: 'nav-landing'
+          
           li.nav-item
             = link_to "О нас", pages_about_path, class: "nav-landing"
+        p.notice= notice 
+        p.alert= alert 
+
         = yield 
+
+
  
  
