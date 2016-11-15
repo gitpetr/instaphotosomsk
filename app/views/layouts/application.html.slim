@@ -3,26 +3,22 @@ html
   head
     title Instaphoto 
     = csrf_meta_tags 
-
+    | <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     = stylesheet_link_tag    'application', media: 'all' 
     = javascript_include_tag 'application' 
 
   body
+    - if user_signed_in? 
+      .container-fluid.container-login 
+        = render "layouts/navigation"
+        p.notice= notice 
+        p.alert= alert 
+
+        = yield 
+    - else 
+      .container-fluid.container-background.container-login
+        = render "layouts/navigation"
     
-    .container-fluid.container-background
-      .container
-        ul.nav.nav-pills
-
-
-          li.nav-item
-            = link_to "Instaphoto", root_path, class: "nav-landing"
-
-          - if user_signed_in?
-            li.nav-item
-              = link_to "Выйти", destroy_user_session_path, method: :delete, class: 'nav-landing'
-          
-          li.nav-item
-            = link_to "О нас", pages_about_path, class: "nav-landing"
         p.notice= notice 
         p.alert= alert 
 
