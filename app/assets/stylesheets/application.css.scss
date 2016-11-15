@@ -17,6 +17,9 @@ $display3-size: 4rem;
 $jumbotron-bg: rgba(255,255,255, 0.4);
 $btn-primary-bg: #6BB9F0;
 $btn-warning-bg: #E08283;
+$panel-default-heading-bg: #8ED2F2;
+$panel-bg: rgba(255,255,255, 0.4);
+
 @import "bootstrap-sprockets";
 @import "bootstrap";
 .container-background {
@@ -51,7 +54,11 @@ $btn-warning-bg: #E08283;
 .nav-landing:visited {
   color: #3498DB;
   }
-
+.devise-form {
+    width:50%;
+    margin-left:auto;
+    margin-right:auto;
+  }
 .nav-landing:hover,
 .nav-landing:active {
   color: cyan;
