@@ -21,7 +21,7 @@
             <li> <%= link_to "Мои фото", profiles_my_photos_path %></li>
             <li><%= link_to "Мои подписки", profiles_subscribes_list_path %></li>
             <li><%= link_to "Фото друзей", profiles_friends_photos_path %></li>
-            <li> <%= link_to current_user.email, edit_user_registration_path  %></li>
+            <li> <%= link_to current_user.name, edit_user_registration_path  %></li>
             <li><%= link_to "Выйти", destroy_user_session_path, method: :delete %></li>
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>

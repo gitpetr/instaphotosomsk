@@ -5,7 +5,7 @@
       br
       strong= @photo.description
       br
-      = @photo.user.email if @photo.user 
+      = @photo.user.name if @photo.user 
    
   .panel-footer
     - if @photo.user == current_user 

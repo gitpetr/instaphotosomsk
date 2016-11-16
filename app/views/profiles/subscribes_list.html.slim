@@ -4,7 +4,7 @@
     .photo-form
       .panel-body
 
-        = link_to friend.email, profile_path(friend.id) 
+        = link_to friend.name, profile_path(friend.id) 
         br
       .panel-footer
         strong.pull-left= link_to "Отписаться", unsubscribe_profile_path(friend) 

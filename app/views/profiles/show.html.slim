@@ -1,8 +1,8 @@
-= @user.email 
+= @user.name 
 - if current_user.id == @user.id
 - else
   - if current_user.subscriptions.exists?(friend_id: @user.id)
-    p= link_to 'Onписаться', unsubscribe_profile_path(@user)
+    p= link_to 'Oтписаться', unsubscribe_profile_path(@user)
   - else
     p= link_to 'Подписаться', subscribe_profile_path(@user)
 br

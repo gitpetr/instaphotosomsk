@@ -7,5 +7,5 @@
         br
       .panel-footer
         strong.pull-left= photo.description 
-        span.pull-right 
+        span.pull-right= link_to photo.user.name, profile_path(photo.user_id) 
            

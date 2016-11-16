@@ -9,7 +9,7 @@
       - photo.errors.full_messages.each do |message| 
         li= message 
       
-  = f.input :image, as: :file 
-  = f.input :description 
-  = f.submit 
+  = f.input :image, as: :file, label: 'фотография' 
+  = f.input :description, label: 'описание' 
+  = f.submit 'сохранить'
  
