@@ -1,0 +1,19 @@
+= @user.id
+= @user.email 
+br
+
+- @user.photos.each do |photo| 
+  .panel.panel-default
+    .photo-form
+      .panel-body
+
+        = link_to (image_tag photo.image.url(:medium)), photo, class: "photo-link"  
+        br
+      .panel-footer
+        strong.pull-left= photo.description  
+        - if photo.user == current_user
+          span.pull-right 
+            =' link_to 'Edit', edit_photo_path(photo) 
+            ' | 
+            =' link_to 'Destroy', photo, method: :delete, data: { confirm: 'Are you sure?' } 
+   

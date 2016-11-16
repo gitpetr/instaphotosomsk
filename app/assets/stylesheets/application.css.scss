@@ -63,14 +63,27 @@ $body-bg: #E9F2EA;
     margin-left:auto;
     margin-right:auto;
   }
-.photo-form {
+
+
+.panel, .panel-default{
+  margin: 15px;
+  display: inline-block;
+  .photo-form {
     // 
-    width: 50%;
     display: inline-block;
     margin-left:auto;
     margin-right:auto;
-    text-align: left;
+   .pull-left, .pull-right{
+      width: 48%;
+      padding:15px;
+
+   }
+
+   img{
+        width: 100%;
+      }
   }
+}
 .nav-landing:hover,
 .nav-landing:active {
   color: cyan;
