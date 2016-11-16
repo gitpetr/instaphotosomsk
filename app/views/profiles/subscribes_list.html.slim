@@ -1,0 +1,10 @@
+ h2 Мои подписки
+ - @friends.each do |friend|
+  .panel.panel-default
+    .photo-form
+      .panel-body
+
+        = link_to friend.email, profile_path(friend.id) 
+        br
+      .panel-footer
+        strong.pull-left= link_to "Отписаться", unsubscribe_profile_path(friend) 

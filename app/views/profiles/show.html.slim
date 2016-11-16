@@ -1,7 +1,11 @@
-= @user.id
 = @user.email 
+- if current_user.id == @user.id
+- else
+  - if current_user.subscriptions.exists?(friend_id: @user.id)
+    p= link_to 'Onписаться', unsubscribe_profile_path(@user)
+  - else
+    p= link_to 'Подписаться', subscribe_profile_path(@user)
 br
-
 - @user.photos.each do |photo| 
   .panel.panel-default
     .photo-form

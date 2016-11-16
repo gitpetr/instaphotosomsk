@@ -1,0 +1,11 @@
+- @photos.each do |photo| 
+  .panel.panel-default
+    .photo-form
+      .panel-body
+
+        = link_to (image_tag photo.image.url(:medium)), photo, class: "photo-link"  
+        br
+      .panel-footer
+        strong.pull-left= photo.description 
+        span.pull-right 
+           

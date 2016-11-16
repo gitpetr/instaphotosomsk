@@ -18,6 +18,9 @@
           <ul class="nav navbar-nav navbar-right">
             <li><%= link_to "О проекте", pages_about_path %></li>
             <li><%= link_to "Фотографии", photos_path %></li>
+            <li> <%= link_to "Мои фото", profiles_my_photos_path %></li>
+            <li><%= link_to "Мои подписки", profiles_subscribes_list_path %></li>
+            <li><%= link_to "Фото друзей", profiles_friends_photos_path %></li>
             <li> <%= link_to current_user.email, edit_user_registration_path  %></li>
             <li><%= link_to "Выйти", destroy_user_session_path, method: :delete %></li>
             <li class="dropdown">
