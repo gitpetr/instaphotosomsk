@@ -15,4 +15,4 @@
 
 # Ignore Byebug command history file.
 .byebug_history
-/public/system/photos/images/
+/public/system/photos/images/*
