@@ -80,10 +80,10 @@ Rails.application.configure do
     address:              'smtp.gmail.com',
     port:                 587,
     domain:               'instafotosomsk.herokuapp.com',
-    # user_name:            'pkhilenko@gmail.com',
-    # password:             'c_1965-tatinu1965',
-    user_name:            ENV.fetch('MAIL_ACCOUNT_NAME'),
-    password:             ENV.fetch('MAIL_PASSWORD'),
+    user_name:            'pkhilenko@gmail.com',
+    password:             'c_1965-tatinu1965',
+    # user_name:            ENV.fetch('MAIL_ACCOUNT_NAME'),
+    # password:             ENV.fetch('MAIL_PASSWORD'),
     authentication:       'plain',
     enable_starttls_auto: true  } 
 
