@@ -74,16 +74,18 @@ Rails.application.configure do
   # Use a different logger for distributed setups.
   # require 'syslog/logger'
   # config.logger = ActiveSupport::TaggedLogging.new(Syslog::Logger.new 'app-name')
-  config.action_mailer.default_url_options = { host: 'https://instafotosomsk.herokuapp.com/' } 
+  config.action_mailer.default_url_options = { host: 'instafotosomsk.herokuapp.com' } 
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
     address:              'smtp.gmail.com',
     port:                 587,
     domain:               'instafotosomsk.herokuapp.com',
+    # user_name:            'pkhilenko@gmail.com',
+    # password:             'c_1965-tatinu1965',
     user_name:            ENV.fetch('MAIL_ACCOUNT_NAME'),
     password:             ENV.fetch('MAIL_PASSWORD'),
     authentication:       'plain',
-    enable_starttls_auto: true  }
+    enable_starttls_auto: true  } 
 
   config.paperclip_defaults = {
     storage: :s3,
