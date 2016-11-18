@@ -1,5 +1,5 @@
 class ProfilesController < ApplicationController
- before_action :authenticate_user!, except: [:show]
+ before_action :authenticate_user!
  before_action :set_user, except: [:my_photos, :subscribes_list, :friends_photos]
 
   def show
