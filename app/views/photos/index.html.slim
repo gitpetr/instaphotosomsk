@@ -9,13 +9,16 @@
         strong.pull-left= photo.description 
         span.pull-right 
           - if photo.user == current_user
-            =' link_to 'Edit', edit_photo_path(photo) 
+            =' link_to edit_photo_path(photo)  do
+              i.ion-edit 
+            '
             ' | 
-            =' link_to 'Destroy', photo, method: :delete, data: { confirm: 'Are you sure?' } 
+            '
+            = link_to photo, method: :delete, data: { confirm: 'Are you sure?' }  do
+              i.ion-trash-a
+ 
           - else
             = link_to photo.user.name, profile_path(photo.user_id) if photo.user   
 br
 = will_paginate @photos, renderer: BootstrapPagination::Rails
-.container    
-  - if user_signed_in?
-    = link_to 'New Photo', new_photo_path, class:"btn btn-primary" 
+  

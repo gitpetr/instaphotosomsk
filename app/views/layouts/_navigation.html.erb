@@ -16,24 +16,27 @@
         
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav navbar-right">
-            <li><%= link_to "О проекте", pages_about_path %></li>
+            <li><%= link_to 'Загрузить', new_photo_path %></li>
+
             <li><%= link_to "Фотографии", photos_path %></li>
-            <li> <%= link_to "Мои фото", profiles_my_photos_path %></li>
-            <li><%= link_to "Мои подписки", profiles_subscribes_list_path %></li>
-            <li><%= link_to "Фото друзей", profiles_friends_photos_path %></li>
-            <li> <%= link_to current_user.name, edit_user_registration_path  %></li>
-            <li><%= link_to "Выйти", destroy_user_session_path, method: :delete %></li>
+            
+           
             <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+                <div class="dropdown">
+              <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+               <i class="ion-person"></i><%=current_user.name %>
+                <span class="caret"></span>
+              </button>
               <ul class="dropdown-menu">
-                <li><a href="#">Действие</a></li>
-                <li><a href="#">Другое действие</a></li>
-                <li><a href="#">Что-то еще</a></li>
+                <li><%= link_to "Мои фото", profiles_my_photos_path %></li>
+                <li><%= link_to "Мои подписки", profiles_subscribes_list_path %></li>
+                <li><%= link_to "Фото друзей", profiles_friends_photos_path %></li>
                 <li class="divider"></li>
-                <li><a href="#">Отдельная ссылка</a></li>
+                <li><%= link_to current_user.name, edit_user_registration_path  %></li>
                 <li class="divider"></li>
-                <li><a href="#">Еще одна отдельная ссылка</a></li>
+                <li><%= link_to "Выйти", destroy_user_session_path, method: :delete %></li>
               </ul>
+              </div>
             </li>
           </ul>
     </div>
@@ -59,18 +62,7 @@
             <li><%= link_to "О проекте", pages_about_path, class: 'nav-link ' %></li>
             <li><%= link_to "Фотографии", photos_path %></li>
             <li><%= link_to "Войти", new_user_session_path, class: 'nav-link' %></li>
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
-              <ul class="dropdown-menu">
-                <li><a href="#">Действие</a></li>
-                <li><a href="#">Другое действие</a></li>
-                <li><a href="#">Что-то еще</a></li>
-                <li class="divider"></li>
-                <li><a href="#">Отдельная ссылка</a></li>
-                <li class="divider"></li>
-                <li><a href="#">Еще одна отдельная ссылка</a></li>
-              </ul>
-            </li>
+             
           </ul>
     </div>
     </div>

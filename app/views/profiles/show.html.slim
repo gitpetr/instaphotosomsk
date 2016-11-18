@@ -2,11 +2,11 @@
 - if current_user.id == @user.id
 - else
   - if current_user.subscriptions.exists?(friend_id: @user.id)
-    p= link_to 'Oтписаться', unsubscribe_profile_path(@user)
+    p= link_to 'Oтписаться', unsubscribe_profile_path(@user), class: "btn btn-danger"
   - else
-    p= link_to 'Подписаться', subscribe_profile_path(@user)
+    p= link_to 'Подписаться', subscribe_profile_path(@user), class: "btn btn-success "
 br
-- @user.photos.each do |photo| 
+- @photos.each do |photo| 
   .panel.panel-default
     .photo-form
       .panel-body
@@ -17,7 +17,12 @@ br
         strong.pull-left= photo.description  
         - if photo.user == current_user
           span.pull-right 
-            =' link_to 'Edit', edit_photo_path(photo) 
+            =' link_to edit_photo_path(photo)  do
+              i.ion-edit 
+            '
             ' | 
-            =' link_to 'Destroy', photo, method: :delete, data: { confirm: 'Are you sure?' } 
+            '
+            = link_to photo, method: :delete, data: { confirm: 'Are you sure?' }  do
+                i.ion-trash-a
+           
    

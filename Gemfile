@@ -54,5 +54,6 @@ gem 'aws-sdk', '~> 2.6'
 gem 'slim-rails', '~> 3.1'
 gem 'simple_form', '~> 3.3'
 gem 'bootstrap-sass', '~> 3.3'
+gem 'ionicons-rails', '~> 2.0'
 
 ruby '2.3.0'

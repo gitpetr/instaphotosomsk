@@ -1,7 +1,9 @@
 class ProfilesController < ApplicationController
+ before_action :authenticate_user!, except: [:show]
  before_action :set_user, except: [:my_photos, :subscribes_list, :friends_photos]
 
   def show
+    @photos = @user.photos.paginate(:page => params[:page], :per_page => 2)
   end
 
 

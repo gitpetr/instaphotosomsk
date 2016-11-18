@@ -8,4 +8,6 @@
       .panel-footer
         strong.pull-left= photo.description 
         span.pull-right= link_to photo.user.name, profile_path(photo.user_id) 
+br
+= will_paginate @photos, renderer: BootstrapPagination::Rails
            
